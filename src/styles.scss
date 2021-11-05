@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+@import "node_modules/bootstrap/scss/bootstrap";
+
+@font-face {
+    font-display: swap;
+    font-family: "boschsans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("assets/boschsans_bold.woff2") format("woff2");
+}
+
+// @font-face {
+//     font-display: swap;
+//     font-family: "boschsans";
+//     font-style: italic;
+//     font-weight: 700;
+//     src: url('assets/boschsans-bolditalic.woff2') format("woff2"),
+//         url('assets/boschsans-bolditalic.woff') format("woff");
+// }
+@font-face {
+    font-display: swap;
+    font-family: "boschsans";
+    font-style: normal;
+    font-weight: regular;
+    src: url("assets/boschsans_regular.woff2") format("woff2");
+}
+// @font-face {
+//     font-display: swap;
+//     font-family: "boschsans";
+//     font-style: italic;
+//     font-weight: regular;
+//     src: url('assets/boschsans-regularitalic.woff2') format("woff2"),
+//         url('assets/boschsans-regularitalic.woff') format("woff");
+// }
+
+body {
+    font-family: "boschsans";
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+.text-black {
+    color: rgba(0, 0, 0, 0);
+}
+
+.text-12 {
+    font-size: 12px;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
