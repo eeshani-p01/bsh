@@ -1,0 +1,36 @@
+.nav-tabs {
+    border-bottom: 1px solid #e0e2e5;
+    height: 52px;
+
+    .nav-item {
+        position: relative;
+        margin: 0 16px;
+    }
+
+    .nav-link {
+        color: black;
+        border: none;
+        padding: 0.5rem;
+
+        &:hover {
+            color: #00629a;
+        }
+
+        &.active {
+            color: #007bc0;
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 2px;
+                width: 100%;
+                background-color: #007bc0;
+                transition: opacity cubic-bezier(0.38, 0.04, 0.35, 0.96) 250ms;
+                -webkit-transform-origin: 0 100%;
+                transform-origin: 0 100%;
+            }
+        }
+    }
+}
