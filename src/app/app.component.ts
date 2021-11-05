@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bsh';
+  isMenuOpen = false;
+
+  constructor() { }
+
+  openMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }

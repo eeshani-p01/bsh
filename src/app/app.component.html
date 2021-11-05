@@ -1,21 +1,87 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="header-bar"></div>
+<div class="container-fluid px-lg-5">
+  <nav class="navbar navbar-expand-lg navbar-light mx-lg-5">
+    <a class="" href="#">
+      <img src="assets/bosch-logo.svg" class="logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item me-3 dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="lang" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Language Selection
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="lang">
+            <li><a class="dropdown-item" href="#">English</a></li>
+            <li><a class="dropdown-item" href="#">German</a></li>
+            <li><a class="dropdown-item" href="#">Spanish</a></li>
+          </ul>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link text-black d-flex align-items-center cursor-pointer" aria-current="page" routerLink="contact">
+            <i class="bi-chat-left me-2"></i>
+            <p class="mb-0">Contact us</p>
+          </a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link text-black d-flex align-items-center cursor-pointer">
+            <i class="bi-search me-2"></i>
+            <p class="mb-0">Search</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black d-flex align-items-center cursor-pointer" (click)="openMenu()">
+            <a class="M-Main-Navigation__toggle__icon me-2"
+              [ngClass]="{ 'M-Main-Navigation__toggle--active': isMenuOpen}">
+              <span class="M-Main-Navigation__toggle__bar"></span>
+              <span class="M-Main-Navigation__toggle__bar"></span>
+              <span class="M-Main-Navigation__toggle__bar"></span>
+              <span class="M-Main-Navigation__toggle__bar"></span>
+            </a>
+            <p class="mb-0">Menu</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="px-lg-5 d-flex align-items-center">
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <ol class="breadcrumb text-12">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+      </ol>
+    </nav>
+    <p class="fw-bold ms-auto">Bosch in India</p>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<nav class="M-Main-Navigation__flyoutWrapper is-visible" [ngClass]="{'is-visible': isMenuOpen}"
+aria-label="Main Navigation" aria-hidden="false" aria-expanded="true">
+<div class="container-fluid">
+  <ul class="M-Main-Navigation__items M-Main-Navigation__items--first M-Main-Navigation__items--expanded px-5 mx-5 mt-5"
+    role="menubar">
+    <li class="M-Main-Navigation__item M-Main-Navigation__item--first" role="none">
+      <a class="M-Main-Navigation__link M-Main-Navigation__linkToSecond" aria-haspopup="true"
+        role="menuitem">
+        <h4 class="M-Main-Navigation__linkText cursor-pointer mb-5">DIY</h4>
+      </a>
+    </li>
+    <li class="M-Main-Navigation__item M-Main-Navigation__item--first" role="none">
+      <a class="M-Main-Navigation__link M-Main-Navigation__linkToSecond" aria-haspopup="true"
+        role="menuitem">
+        <h4 class="M-Main-Navigation__linkText cursor-pointer mb-5">Guide</h4>
+      </a>
+    </li>
+    <li class="M-Main-Navigation__item M-Main-Navigation__item--first" role="none">
+      <a class="M-Main-Navigation__link M-Main-Navigation__linkToSecond" aria-haspopup="true"
+        role="menuitem">
+        <h4 class="M-Main-Navigation__linkText cursor-pointer">Customer Care</h4>
+      </a>
+    </li>
+  </ul>
+</div>
+</nav>
 <router-outlet></router-outlet>
