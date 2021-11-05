@@ -1,0 +1,30 @@
+.bg-manual {
+    background-image: url("../../assets/manual.jpg");
+    background-size: contain;
+}
+
+.layout {
+    display: block;
+    position: absolute;
+    transform: skewX(-20deg);
+    transform-origin: 0 0;
+    width: 474px;
+    left: 112px;
+    top: 49px;
+    z-index: 3;
+    bottom: 0;
+    content: "";
+    opacity: 0.5;
+    background: #811d77 !important;
+    height: 302px;
+}
+
+.manual-font {
+    font-family: "Zen Antique", serif;
+    text-decoration: underline;
+}
+
+.manual-text {
+    top: 0;
+    z-index: 5;
+}
