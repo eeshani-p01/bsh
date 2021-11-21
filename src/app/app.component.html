@@ -32,10 +32,14 @@
           </a>
         </li> -->
         <li class="nav-item me-3">
-          <a class="nav-link text-black d-flex align-items-center cursor-pointer">
+          <a class="nav-link text-black d-flex align-items-center cursor-pointer" *ngIf="!isSearchEnable" (click)="isSearchEnable = true">
             <i class="bi-search me-2"></i>
             <p class="mb-0 d-none d-lg-block">Search</p>
           </a>
+          <div class="position-relative" *ngIf="isSearchEnable">
+            <input class="form-control"/>
+            <i class="bi-x-lg position-absolute"></i>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link text-black d-flex align-items-center cursor-pointer" (click)="openMenu()">
@@ -60,6 +64,7 @@
           <span *ngIf="router.url === '/contact'">Customer Care</span>
           <span *ngIf="router.url === '/diy'">DIY</span>
           <span *ngIf="router.url === '/guide'">Guide</span>
+          <span *ngIf="router.url === '/merchandise'">Merchandise</span>
         </li>
       </ol>
     </nav>
@@ -85,6 +90,12 @@
         </a>
       </li>
       <li class="M-Main-Navigation__item M-Main-Navigation__item--first" role="none">
+        <a class="M-Main-Navigation__link M-Main-Navigation__linkToSecond" routerLink="merchandise" aria-haspopup="true" role="menuitem"
+          (click)="isMenuOpen = false">
+          <h4 class="M-Main-Navigation__linkText cursor-pointer mb-5">Merchandise</h4>
+        </a>
+      </li>
+      <li class="M-Main-Navigation__item M-Main-Navigation__item--first" role="none">
         <a class="M-Main-Navigation__link M-Main-Navigation__linkToSecond" routerLink="contact" aria-haspopup="true" role="menuitem"
           (click)="isMenuOpen = false">
           <h4 class="M-Main-Navigation__linkText cursor-pointer">Customer Care</h4>
@@ -94,3 +105,18 @@
   </div>
 </nav>
 <router-outlet></router-outlet>
+<div class="chat" [ngClass]="{ 'active': isChatOpen }">
+  <img class="mykie" (click)="isChatOpen = !isChatOpen" src="assets/mykie.jpg"/>
+  <div class="card">
+    <div class="card-header py-0 px-2 text-white d-flex justify-content-between align-items-center">
+      <p class="m-0 text-14">Chat</p>
+      <i class="bi-dash cursor-pointer" (click)="isChatOpen = false"></i>
+    </div>
+    <div class="card-body p-2 text-center">
+      <p  class="text-12 m-0">
+        <strong>B/S/H Support</strong>
+      </p>
+      <small class="text-muted text-10">How can we help you?</small>
+    </div>
+  </div>
+</div>
