@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'bsh';
   isMenuOpen = false;
+  isChatOpen = false;
+  isSearchEnable = false;
 
   constructor(public router: Router) {
    }

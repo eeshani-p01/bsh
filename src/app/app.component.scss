@@ -11,14 +11,68 @@
     z-index: 1000;
 }
 
-.navbar{
+.navbar {
     z-index: 2;
+}
+
+.bi-x-lg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 6px;
+    cursor: pointer;
+    margin: auto;
+    height: 30px;
+    padding: 4px;
 }
 
 .logo {
     width: 194px;
     height: 96px;
     margin-left: -18px;
+}
+
+.chat {
+    position: fixed;
+    bottom: 60px;
+    right: 35px;
+    z-index: 10;
+    transition: 0.3s;
+    border-color:  #777 !important;
+
+    &:hover .mykie,
+    &.active .mykie {
+        transition: 0.3s;
+        box-shadow: 0px 0px 6px 3px #007bc0;
+    }
+
+    &.active {
+        .card {
+            display: block;
+        }
+    }
+
+    .mykie {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 4px 2px #777;
+        cursor: pointer;
+    }
+
+    .card {
+        height: 200px;
+        width: 200px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 65px;
+        right: 0;
+        display: none;
+
+        .card-header {
+            background-color: #007bc0;
+        }
+    }
 }
 
 .M-Main-Navigation__toggle__icon {
@@ -103,10 +157,10 @@ html:not(.is-touch) .M-Main-Navigation__toggle:hover .M-Main-Navigation__toggle_
     -webkit-transform: translateY(0);
     transform: translateY(0);
     box-shadow: 0 -16px 0 #fff, 0 0 16px rgba(0, 0, 0, 0.25);
-    height: 260px;
+    height: 330px;
 
     ul {
-        height: 260px;
+        height: 330px;
     }
 }
 
